@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1em;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #61dafb;
+            border: none;
+            color: black;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #21a1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Snake Game</h1>
+        <p>Welcome to the Snake Game! Click the button below to start playing.</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <script>
+        function startGame() {
+            fetch('/start_game', { method: 'POST' });
+        }
+    </script>
+</body>
+</html>
